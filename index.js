@@ -19,7 +19,7 @@ var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var car = new Image();
 var rim = new Image();
-car.src = './img/car.png';
+car.src = './img/car.svg';
 var defineCanvasWidth = function () {
     if (document.body.clientWidth < 600) {
         return Math.max(mainContainer.offsetWidth * 0.7, 250);

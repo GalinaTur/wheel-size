@@ -21,7 +21,7 @@ const canvas = document.getElementById('canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d')!;
   const car = new Image()!;
   const rim = new Image()!;
-  car.src = './img/car.png';
+  car.src = './img/car.svg';
 
 const defineCanvasWidth = () => {
   if (document.body.clientWidth < 600) {
