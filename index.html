@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="index.js" defer></script>
+    <title>Wheel calculator</title>
+</head>
+
+<body>
+    <header class="header">
+    </header>
+
+    <main class="main">
+<div class="mainContainer">
+        <form>
+            <div class="input">
+                <label class="input__title">Rim radius: <span id="rimRadiusValue"></span> in
+                    <input type="range" id="rimRadius" name="rimRadius" step="1" min="13" max="19" value="16"
+                        oninput="onRimRadiusChange()">
+                </label>
+
+            </div>
+            <div class="input">
+                <label class="input__title">Tyre width: <span id="tyreWidthValue"></span> mm
+                    <input type="range" id="tyreWidth" step="10" min="175" max="225" value="205"
+                        oninput="onTyreWidthChange()">
+                </label>
+            </div>
+            <div class="input">
+                <label class="input__title">Tyre thickness: <span id="tyreThicknessValue"></span> %
+                    <input type="range" id="tyreThickness" step="5" min="20" max="80" value="50"
+                        oninput="onTyreThicknessChange()">
+                </label>
+            </div>
+            <div class="input">
+                <label class="input__title">Outer diameter:</label> mm
+                <input type="number" size="5" id="outerDiameter" onsubmit="onOuterDiameterChange(event)" min="400"
+                    max="843">
+                <button type="submit" onclick="onOuterDiameterChange(event)">OK</button>
+            </div>
+        </form>
+
+        <div class="canvas__container">
+        <canvas class='car__scheme' id="canvas">
+        </canvas>
+    </div>
+</div>
+    </main>
+</body>
+
+</html>
